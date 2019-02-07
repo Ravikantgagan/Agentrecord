@@ -8,9 +8,9 @@
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <meta name="description" content="">
           <meta name="author" content="">
-
-          <title> SB Admin - Dashboard</title>
-          
+<!-- 
+          <title>  Agent - Dashboard</title>
+       -->    
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
           <!-- Bootstrap core CSS-->
@@ -29,18 +29,18 @@
           </head>
 
           <body id="page-top">
-           @include('admin.partials.header')
+           @include('admin.AgentPartials.header')
           <div id="wrapper">
-            @include('admin.partials.left_menu')
+          <!--   @include('admin.AgentPartials.left_menu')  -->
             <!-- Sidebar -->
-            <div id="content-wrapper">
+             <div id="content-wrapper">  
 
-            <div class="container-fluid">
+            <div class="container-fluid mt-2">
 
-              <section class="content-header">
+             <!--  <section class="content-header">
                     <h1>@yield('title')</h1>
-                    @include('admin.partials.alerts')
-                </section>
+                    @include('admin.AgentPartials.alerts')
+                </section> -->
 
                 <section class="content">
                   @yield('contents')
@@ -48,9 +48,13 @@
 
               </div>
             </div>
-            @include('admin.partials.footer')
+
+            
+                @include('admin.AgentPartials.footer')
+        
+  
             <!-- /.content-wrapper -->
-          </div>
+               </div>
           <!-- /#wrapper -->
           <!-- Bootstrap core JavaScript-->
 

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Agentbalancesheet extends Model
 {
@@ -11,11 +12,9 @@ class Agentbalancesheet extends Model
      *
      * @var array
      */
+    use SoftDeletes;
      protected $table = 'agentbalancesheets';
     
    
-    protected $fillable = [
-
-        'user_name', 'user_balance', 
-    ];
+  
 }

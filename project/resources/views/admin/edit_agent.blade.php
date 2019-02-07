@@ -11,10 +11,18 @@
      <form method="post" action="{{ url('agent/update-profile/'.$agent->agent_id) }}">
           
           @csrf
+
+          
+     <div class="form-group">
+      <label for="agent_address">Agent Name</label>
+      <input type="text" name="agent_name" class="form-control" id="agent_name" placeholder="name" autocomplete="off" value="{{$agent->agent_name}}">
+    </div>
+
+
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="agent_name">Agent Name</label>
-        <input type="text" name="agent_name" class="form-control" id="agent_name" placeholder="Agent Name" autocomplete="off" value="{{$agent->agent_name}}">
+        <label for="agent_name">Deposit_Date</label>
+       <input type="text" name="bal_deposite_date" class="form-control" id="agent_date" placeholder="2018-04-27" autocomplete="off" value="{{ $agent->bal_deposite_date}}">
       </div>
 
       <div class="form-group col-md-6">

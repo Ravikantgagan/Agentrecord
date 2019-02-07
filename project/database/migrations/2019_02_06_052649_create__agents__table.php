@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAgentTable extends Migration
+class CreateAgentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,10 +16,14 @@ class CreateAgentTable extends Migration
         Schema::create('agents', function (Blueprint $table) {
             $table->increments('agent_id');
             $table->string('agent_name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('agent_password')->nullable();
             $table->string('agent_address');
-            $table->integer('agent_contact');
+            $table->string('agent_contact');
             $table->string('agent_type');
-            //$table->integer('agent_balance');
+            $table->softDeletes();
+            //$table->timestamps('bal_deposite_date');
             $table->timestamps();
         });
     }

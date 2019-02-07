@@ -13,35 +13,28 @@
             <thead>
               <tr>
                 <th>No</th>
-                
                 <th>AgentName</th>
                 <th>AgentAddress</th>
                 <th>AgentContact</th>
+                <th>Deposit_Date</th>
                 <th>AgentType</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-         
-              
               <tr>
-                
                 <td>{{$agent->agent_id}}</td>
-          
                 <td>{{$agent->agent_name}}</td>
                 <td>{{$agent->agent_address}}</td>
                 <td>{{$agent->agent_contact}}</td>
+                <td>{{$agent->bal_deposite_date}}</td>
                 <td>{{$agent->agent_type}}</td>
-                
-                <td>
-                 
+              
+                      <td>
                         <a href="{{ URL::previous('agentshow') }}">Go Back</a>
                         <a href="{{ url('agent/delete-profile/'.$agent->agent_id )}}"> Delete</a>
                     </td>  
                     </tr>     
-             
-                      
-                
             </tbody>
           </table>
         </div>

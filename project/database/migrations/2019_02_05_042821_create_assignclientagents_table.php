@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAgentbalancesheetsTable extends Migration
+class CreateAssignclientagentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateAgentbalancesheetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('agentbalancesheets', function (Blueprint $table) {
-                     
+        Schema::create('assignclientagents', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('client_id');
             $table->integer('agent_id');
-            $table->integer('agent_balance');
-            $table->string('status');
-            $table->string('deleted_by')->nullable();
-            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ class CreateAgentbalancesheetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('agentbalancesheets');
+        Schema::dropIfExists('assignclientagents');
     }
 }
